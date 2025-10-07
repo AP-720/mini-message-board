@@ -1,0 +1,26 @@
+{
+	"name": "mini-message-board",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js",
+		"test": "node --test",
+		"debug": "node --inspect app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"dependencies": {
+		"express": "^5.1.0",
+		"modern-normalize": "^3.0.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.14.0",
+		"eslint": "^9.14.0",
+		"eslint-config-prettier": "^9.1.0",
+		"nodemon": "^3.1.10"
+	}
+}
