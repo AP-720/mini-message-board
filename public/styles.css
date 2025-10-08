@@ -1,0 +1,49 @@
+@import "reset.css";
+
+body {
+	margin: 0;
+	background-color: #2b2b2b;
+	color: #e5e5e5;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #4fe835;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 1em;
+}
+
+.messagesContainer {
+	width: 1200px;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+.messagesContainer > h2 {
+	padding: 0 0 0.5em 0;
+}
+
+.message {
+	padding: 1.5em;
+	background-color: #454545;
+	border-radius: 8px;
+}
+
+.message > h3 {
+	padding: 0.5em 0 0 0;
+	color: #9ae835;
+}

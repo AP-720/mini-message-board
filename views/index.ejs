@@ -1,0 +1,13 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<body>
+		<%- include('./partials/header.ejs') %>
+		<div class="messagesContainer">
+			<h2>Messages</h2>
+			<ul>
+				<% messages.forEach((message) => { %> <%-
+				include('./partials/messages.ejs', {message}) %> <% }) %>
+			</ul>
+		</div>
+	</body>
+</html>
