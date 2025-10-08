@@ -7,12 +7,17 @@ const PORT = 3000;
 // Routers
 const indexRouter = require("./routes/index");
 const newMessageRouter = require("./routes/newMessage");
+
 // Static files
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
+
 // ejs
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+// Middleware
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);

@@ -4,10 +4,10 @@
 		<%- include('./partials/header.ejs') %>
 		<div class="formContainer">
 			<h2>New Message</h2>
-			<form action="/new" method="post">
+			<form action="/new" method="POST">
 				<label for="message">Message: </label>
 				<textarea
-					name="message"
+					name="messageText"
 					id="message"
 					placeholder="Enter message"
 					cols="40"
@@ -15,7 +15,7 @@
 					required
 				></textarea>
 				<label for="name">Name:</label>
-				<input type="text" placeholder="Enter name" required />
+				<input type="text" placeholder="Enter name" name="name" required />
 				<button type="submit">Send</button>
 			</form>
 		</div>
