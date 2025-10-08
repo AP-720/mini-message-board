@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const messages = require("./data/messages.js");
+const messages = require("../data/messages.js");
 
 const indexRouter = Router();
 
