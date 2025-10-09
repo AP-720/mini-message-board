@@ -49,6 +49,11 @@ ul {
 	color: #9ae835;
 }
 
+.message > a {
+	text-decoration: none;
+	color: #4fe835;
+}
+
 .linkButton {
 	text-decoration: none;
 	padding: 0.5em 3em;

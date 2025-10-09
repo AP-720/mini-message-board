@@ -1,0 +1,17 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<body>
+		<%- include('./partials/header.ejs') %>
+		<div class="messagesContainer">
+			<h2>Messages Details</h2>
+			<ul>
+				<li class="message">
+					<p><%= message.text %></p>
+					<h3><%= message.user %></h3>
+					<p><%= message.added %></p>
+				</li>
+			</ul>
+			<a class="linkButton" href="http://localhost:3000/">Back to messages</a>
+		</div>
+	</body>
+</html>
