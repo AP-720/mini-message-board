@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { messages } = require("../data/messages.js");
+const db = require("../db/queries");
 
 const messageRouter = Router();
 
@@ -7,17 +7,19 @@ messageRouter.get("/", (req, res) => {
 	res.render("form", { title: "New Message" });
 });
 
-messageRouter.post("/", (req, res) => {
+messageRouter.post("/", async (req, res) => {
 	const messageText = req.body.messageText;
-	const messageUser = req.body.name;
+	const messageUsername = req.body.name;
+	const messageDate = new Date().toUTCString();
+	const newMessage = { messageText, messageUsername, messageDate };
 
-	messages.push({
-		text: messageText,
-		user: messageUser,
-		added: new Date().toUTCString(),
-	});
-
-	res.redirect("/");
+	try {
+		await db.postNewMessage(newMessage);
+		res.redirect("/");
+	} catch (error) {
+		console.log("Error", error);
+		res.render("error", { error: error });
+	}
 });
 
 module.exports = messageRouter;
