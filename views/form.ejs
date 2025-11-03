@@ -4,6 +4,7 @@
 		<%- include('./partials/header.ejs') %>
 		<div class="formContainer">
 			<h2>New Message</h2>
+			<%- include('./partials/errors.ejs') %>
 			<form action="/new" method="POST">
 				<label for="message">Message: </label>
 				<textarea
@@ -14,8 +15,8 @@
 					rows="5"
 					required
 				></textarea>
-				<label for="name">Name:</label>
-				<input type="text" placeholder="Enter name" name="name" required />
+				<label for="username">Name:</label>
+				<input type="text" placeholder="Enter name" name="username" required />
 				<button type="submit">Send</button>
 			</form>
 		</div>

@@ -82,6 +82,11 @@ ul {
 	padding: 0 0 0.5rem 0;
 }
 
+.formContainer > ul > li {
+	margin-inline: auto;
+	padding: 0 0 0.5rem 0;
+}
+
 form {
 	background-color: #454545;
 	padding: 1.5rem;
